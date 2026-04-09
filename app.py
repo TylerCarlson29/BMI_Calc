@@ -1,31 +1,3 @@
-Conversation with Gemini
-You said
-Create an app to calculate the BMI using Git hub and stream lit.
-
-The weight should be in Kg
-
-The height should be in meters
-
-
-
-BMI =  Weight/Height *Height
-
-Gemini said
-Building a BMI calculator with Streamlit is a fantastic way to deploy a data app quickly. Since we are using GitHub, I’ll walk you through the code and the steps to get it hosted.
-
-One quick note on the formula: mathematically, it is Weight divided by (Height squared). In code, that looks like:
-
-BMI= 
-height 
-2
- 
-weight
-​
- 
-1. The Code (app.py)
-Create a file named app.py and paste the following code. This uses Streamlit’s simple input widgets to capture user data.
-
-Python
 import streamlit as st
 
 st.set_page_config(page_title="BMI Calculator", page_icon="⚖️")
@@ -41,7 +13,7 @@ with st.container():
 
 if st.button("Calculate BMI"):
     if height > 0:
-        # Formula: weight / (height * height)
+        # Formula: weight / (height^2)
         bmi = weight / (height ** 2)
         bmi_result = round(bmi, 2)
         
